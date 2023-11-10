@@ -32,7 +32,10 @@ function AddPlace() {
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                             Add New Place
                         </h1>
-                        <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
+                        <form
+                            className="space-y-4 md:space-y-6"
+                            onSubmit={handleSubmit}
+                        >
                             <div>
                                 <label
                                     htmlFor="name"
@@ -56,14 +59,16 @@ function AddPlace() {
                                     htmlFor="district"
                                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                 >
-                                    District Name
+                                    State Name
                                 </label>
                                 <input
                                     type="text"
                                     name="district"
                                     id="district"
                                     value={district}
-                                    onChange={(e) => setDistrict(e.target.value)}
+                                    onChange={(e) =>
+                                        setDistrict(e.target.value)
+                                    }
                                     placeholder="district"
                                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     required=""
@@ -81,7 +86,9 @@ function AddPlace() {
                                     name="description"
                                     id="description"
                                     value={description}
-                                    onChange={(e) => setDescription(e.target.value)}
+                                    onChange={(e) =>
+                                        setDescription(e.target.value)
+                                    }
                                     placeholder="description about the place"
                                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     required=""

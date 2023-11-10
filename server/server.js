@@ -4,9 +4,8 @@ const placeSchema = require('./models/placeModel');
 const multer = require('multer');
 const cloudinary = require('cloudinary').v2;
 
-
-
 require('./db/config');
+require('dotenv').config();
 
 const app = express();
 
@@ -17,9 +16,9 @@ const upload = multer({
 });
 
 cloudinary.config({
-    cloud_name: 'duuuqezjw',
-    api_key: '365434569457674',
-    api_secret: 'k25KTElnH4WOJCHAJ3PdQi3fcJ8'
+    cloud_name: CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
 //Middlewares
